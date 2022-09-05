@@ -16,6 +16,7 @@
     --main-color: #2541e0;
     --tow-color: #00c3ffd5;
     --transition: 0.7s;
+    --box-shadow:  0px 0px 20px 2px var(--main-color);
 }
 
 ::selection{
@@ -41,6 +42,85 @@ body{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
+.dark .header,
+.dark .landing,
+.dark .choose-me,
+.dark .who-am{
+    background-color: rgb(12, 11, 11);
+    box-shadow: var(--box-shadow);
+}
+
+.dark .logo,
+.link{
+    text-shadow: 1px 1px 30px var(--main-color);
+}
+
+.dark .header .link:hover{
+    background-color: rgb(12, 11, 11);
+}
+
+.dark .header .dark-lang{
+    position: fixed;
+    right: -2%;
+    top: 30%;
+    flex-direction: column;
+}
+
+.dark .lang{
+    position: fixed;
+    top: 40%;
+    right: -2%;
+}
+
+.dark .header button{
+    background-color: rgb(12, 11, 11);
+    color: #fff;
+    text-shadow: 1px 1px 30px var(--main-color);
+    box-shadow: var(--box-shadow);
+}
+
+.dark .landing .text{
+    box-shadow: var(--box-shadow);
+    background-color: rgb(12, 11, 11);
+}
+
+.dark .main-title{
+    box-shadow: var(--box-shadow);
+}
+
+.dark .choose-me .box:hover{
+    box-shadow: var(--box-shadow) !important;
+}
+
+.dark h2{
+    text-shadow: 1px 1px 30px var(--main-color);
+}
+
+.dark p{
+    text-shadow: 1px 1px 30px var(--main-color);
+}
+
+.dark .who-am::after{
+    background-color: rgb(12, 11, 11);
+}
+
+.dark .progress{
+    box-shadow: var(--box-shadow) !important;
+}
+
+.dark .rights{
+    text-shadow: 1px 1px 30px var(--main-color);
+}
+
+
+
+
+
+
+
+
+
 
 html{
     scroll-behavior: smooth;
@@ -88,7 +168,6 @@ button{
     overflow: hidden;
     z-index: 5;
     display: flex;
-    mix-blend-mode: multiply;
     cursor: pointer;
 }
 
@@ -332,36 +411,17 @@ button:hover{
     width: 100%;
 }
 
-.header .menu-lang{
+.header .dark-lang{
     display: flex;
     align-items: center;
     justify-content: center;
     mix-blend-mode: multiply;
 }
 
-.header .menu-lang img{
+.header .dark-lang img{
     width: 20px;
     height: 20px;
     margin-right: 20px;
-}
-
-.header #menu{
-    font-size: 25px;
-    color: #1a14149a;
-    cursor: pointer;
-    position: relative;
-    display: none;
-}
-
-.header.active{
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-}
-
-.header #menu:hover{
-    color: var(--tow-color);
 }
 
 /**************End Header*****************/
@@ -738,7 +798,7 @@ button:hover{
     padding: 20px;
 }
 
-.who-am  .skills h1{
+.who-am .skills h2{
     color: var(--main-color);
     text-align: center;
     padding-bottom: 20px;
@@ -1048,15 +1108,33 @@ button:hover{
     }
 
     .header .link{
-        font-size: 15px;
+        font-size: 12px;
     }
 
-    button{
-        padding: 5px 10px;
+    .header .dark-lang{
         position: fixed;
-        right: -25px;
-        bottom: 50%;
-        font-size: 10px;
+        right: -8%;
+        top: 30%;
+        flex-direction: column;
+    }
+    
+    .lang{
+        position: fixed;
+        top: 40%;
+        right: -8%;
+    }
+
+    .dark .header .dark-lang{
+        position: fixed;
+        right: -8%;
+        top: 30%;
+        flex-direction: column;
+    }
+    
+    .dark .lang{
+        position: fixed;
+        top: 40%;
+        right: -8%;
     }
 
     .landing .text{
