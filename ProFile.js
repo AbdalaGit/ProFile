@@ -41,7 +41,7 @@ function loading(){
 };
 
 function addloading(){
-  setInterval(loading, 1000 );
+  setInterval(loading, 2500 );
 };
 
 window.onload = addloading();

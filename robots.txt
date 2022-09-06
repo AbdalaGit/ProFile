@@ -1,7 +1,4 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
 User-agent: *
-Allow: /
+Disallow:
 
-Sitemap: http://www.example.com/sitemap.xml
+Sitemap: http://abdalagit.github.io/ProFile/ProFile.html/sitemap.xml
