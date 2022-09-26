@@ -786,7 +786,7 @@ button:hover {
     left: 0;
     background-color: #ececec;
     width: 100vw;
-    min-height: 100vh;
+    min-height: 120vh;
     z-index: -1;
     transform: skewX(-20deg);
 }
