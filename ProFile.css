@@ -386,7 +386,7 @@ button:hover {
     background-color: #e0e0e0;
 }
 
-.header .link:hover a {
+.header .link:hover > a {
     color: var(--tow-color);
     border-radius: 5px;
 }
@@ -418,6 +418,80 @@ button:hover {
     width: 20px;
     height: 20px;
     margin-right: 20px;
+}
+
+.project{
+    position: absolute;
+    top: calc(100% + 50px);
+    left: -150%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 5px solid var(--main-color);
+    gap: 40px;
+    background-color: white;
+    opacity: 0;
+    z-index: -1;
+    transition: var(--transition);
+}
+
+.list > li:hover .project{
+    top: calc(100% + 1px);
+    opacity: 1;
+    z-index: 1;
+}
+
+.project .pro-links{
+    min-width: 200px;
+    flex: 1;
+}
+
+.project .pro-links li{
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.project .pro-links li:not(:last-child){
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.project .pro-links li a{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #777;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.project .pro-links li::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background-color: rgb(231, 231, 231);
+    transition: var(--transition);
+}
+
+.project .pro-links li:hover::before{
+    width: 100%;
+}
+
+.project .pro-links li a img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.project .pro-links li a:hover{
+    color: var(--tow-color);
 }
 
 /**************End Header*****************/
@@ -1018,6 +1092,18 @@ button:hover {
 }
 
 /**************End footer*****************/
+
+@media (min-width: 100px) and (max-width: 1000px){
+    .project{
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+
+    .project .pro-links:first-of-type li:last-child{
+        border-bottom: 1px solid #e0e0e0;
+    }
+}
 
 @media (max-width: 1000px) {
 

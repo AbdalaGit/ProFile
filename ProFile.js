@@ -5,21 +5,10 @@ let ImgDark = document.getElementById("img-dark");
 let buttom = document.querySelector(".darkk");
 
 buttom.addEventListener("click", () => {
-  Body.className = "dark";
+  Body.classList.toggle("dark");
   buttom.textContent = "night";
   buttom.src = "night.png";
-
-  if(buttom.textContent == "night" && Body.className == "dark"){
-    buttom.onclick = () =>{
-      Body.className = "night";
-      buttom.textContent = "dark";
-      if(buttom.textContent == "dark" && Body.className == "night"){
-      }
-    }
-  }
 });
-
-
 
 window.onscroll = function () {
   if (window.scrollY >= who.offsetTop - 50) {
